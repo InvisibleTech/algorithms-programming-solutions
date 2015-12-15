@@ -23,8 +23,6 @@ object PowerFunctions {
   //  efficient.  Not even close.  In fact, awful.
   //
   def pow__div_by_2_superlog(a: Int, n: Int): Int = {
-    println(s"Entering with $a ^ $n ")
-
     n match {
       case 0 => 1
       case k if ((k % 2) == 0) => pow__div_by_2_superlog(a, n >> 1) * pow__div_by_2_superlog(a, n >> 1)
@@ -41,7 +39,6 @@ object PowerFunctions {
   // was it.
   //
   def pow_lograte(a: Int, n: Int): Int = {
-    println(s"Entering with $a ^ $n")
     n match {
       case 0 => 1
       case 1 => a
@@ -58,8 +55,6 @@ object PowerFunctions {
   // I had everything else.
   import scala.annotation.tailrec
   def pow_log_tail(a: Int, n: Int): Int = {
-    println(s"Starting with $a ^ $n")
-
     @tailrec
     def pow_tail(y: Int, a: Int, n: Int): Int = {
       println(s"Tail Starting with $y * $a ^ $n")
