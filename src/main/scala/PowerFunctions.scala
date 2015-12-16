@@ -1,5 +1,6 @@
 package org.invisibletech.algorithmsprogrammingsolutions
 
+// Per the exercise the inputs are all non-negative.
 object PowerFunctions {
   // a ^ n = a * a * ... a  n times n > 0   or 1 if n = 0 
   def pow_sub(a: Int, n: Int): Int = n match {

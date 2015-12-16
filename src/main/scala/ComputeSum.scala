@@ -2,6 +2,7 @@ package org.invisibletech.algorithmsprogrammingsolutions
 
 import scala.annotation.tailrec
 
+// Per the exercise the inputs are all non-negative.
 object ComputeSum {
     def sum_rec(a: Int, b: Int) :Int = {
         @tailrec

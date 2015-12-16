@@ -1,5 +1,6 @@
 package org.invisibletech.algorithmsprogrammingsolutions
 
+// Per the exercise the inputs are all non-negative.
 object ComputeProducts1_1_5 {
     def productBy_+- (a:Int, b:Int) :Int = {
         a match {
