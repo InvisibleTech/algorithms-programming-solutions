@@ -57,7 +57,6 @@ object PowerFunctions {
   def pow_log_tail(a: Int, n: Int): Int = {
     @tailrec
     def pow_tail(y: Int, a: Int, n: Int): Int = {
-      println(s"Tail Starting with $y * $a ^ $n")
       n match {
         case 0 => y
         case 1 => y * a
