@@ -1,2 +1,2 @@
 # algorithms-programming-solutions
-My solutions and solutions from research for problems found in 'Algorithms and Programming: Problems and Solutions
+My solutions and solutions from research for problems found in 'Algorithms and Programming: Problems and Solutions', 'Grokking Algorithms', and 'Algorithms Unplugged'.  Fun!
