@@ -21,7 +21,7 @@ class BreadthFirstSearchSpec() extends FlatSpec {
                                                                 "Moscow" -> List("Istanbul", "Vienna", "Paris"))) === false)
    } 
 
-   "Destination is only neighbor" should "true" in {
+   "Destination is only neighbor" should "return true" in {
       assert(BreadthFirstSearch.existsShortestUnweightedPath("Here", "Timbuktu", 
                                                                 Map[String, List[String]](
                                                                 "Here" -> List("Timbuktu"), 
@@ -29,14 +29,14 @@ class BreadthFirstSearchSpec() extends FlatSpec {
    }
 
 
-   "Destination is only 2nd degree neighbor" should "true" in {
+   "Destination is only 2nd degree neighbor" should "return true" in {
       assert(BreadthFirstSearch.existsShortestUnweightedPath("Here", "Timbuktu", 
                                                                 Map[String, List[String]](
                                                                 "Here" -> List("Moscow"), 
                                                                 "Moscow" -> List("Timbuktu"))) === true)
    } 
 
-   "Destination is the last 2nd degree neighbor" should "true" in {
+   "Destination is the last 2nd degree neighbor" should "return true" in {
       assert(BreadthFirstSearch.existsShortestUnweightedPath("Here", "Timbuktu", 
                                                                 Map[String, List[String]](
                                                                 "Here" -> List("Moscow", "Paris"),
@@ -44,6 +44,13 @@ class BreadthFirstSearchSpec() extends FlatSpec {
                                                                 "Mexico City" -> List("Delhi"),
                                                                 "Delhi" -> List("Timbuktu", "New York"), 
                                                                 "Moscow" -> List("Paris", "Timbuktu"))) === true)
+   } 
+
+   "Cycle in graph and no destination in sight" should "return false" in {
+      assert(BreadthFirstSearch.existsShortestUnweightedPath("Here", "There", 
+                                                                Map[String, List[String]](
+                                                                "Here" -> List("Nowhere"), 
+                                                                "Nowhere" -> List("Here"))) === false)
    } 
  
 }
